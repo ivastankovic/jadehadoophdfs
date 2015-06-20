@@ -17,7 +17,7 @@ The agent communication is as follows.
 HDFS agent (HDFSWriterAgent) needs to be started first. It is already started in the compilestart.sh script, alongside the JADE platform.
 It is preferable to wait for the message from the agent that the file system is configured before starting the sender agent (SenderAgent).
 The sender agent can be started from JADE GUI, arguments that are needed to start the agent should be in a format <inputpath>:<outputpath> or <inputpath>;<outputpath>, where the <inputpath> it the path to the file that needs to be copied, and <outputfile> is a HDFS path.
-The execution mimics the copyFromLocal HDFS command, where everything is done using the combination of JADE and HADOOP API-s.
+The execution mimics the copyFromLocal HDFS command, where everything is done using the combination of JADE and HADOOP APIs.
 
 As for the agent communication protocols, it goes in the following way:
 Sender searchs for HDFS agents. It needs to find exactly one agent. If no agents or more HDFS agents are found, it terminates.
@@ -32,4 +32,6 @@ Additionally, in the takeDown() method of the HDFSWriterAgent there is a procedu
 - files
 - blocs
 - racks
-The fsck check is done when the agent is terminating (For example, executing Kill agent from the JADE GUI).
+- 
+
+ The fsck check is done when the agent is terminating (For example, executing Kill agent from the JADE GUI).
