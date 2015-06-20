@@ -32,6 +32,7 @@ Additionally, in the takeDown() method of the HDFSWriterAgent there is a procedu
 - files
 - blocs
 - racks
-- 
+
+
 
  The fsck check is done when the agent is terminating (For example, executing Kill agent from the JADE GUI).
